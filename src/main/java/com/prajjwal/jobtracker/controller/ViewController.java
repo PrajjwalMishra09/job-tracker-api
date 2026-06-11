@@ -24,6 +24,21 @@ public class ViewController {
 
         model.addAttribute("jobs", repository.findAll());
 
+        model.addAttribute("totalJobs",
+                repository.count());
+
+        model.addAttribute("appliedCount",
+                repository.countByStatus("Applied"));
+
+        model.addAttribute("interviewCount",
+                repository.countByStatus("Interview"));
+
+        model.addAttribute("offerCount",
+                repository.countByStatus("Offer"));
+
+        model.addAttribute("rejectedCount",
+                repository.countByStatus("Rejected"));
+
         return "index";
     }
 
@@ -35,6 +50,21 @@ public class ViewController {
         model.addAttribute(
                 "jobs",
                 repository.findByCompanyNameContainingIgnoreCase(company));
+
+        model.addAttribute("totalJobs",
+                repository.count());
+
+        model.addAttribute("appliedCount",
+                repository.countByStatus("Applied"));
+
+        model.addAttribute("interviewCount",
+                repository.countByStatus("Interview"));
+
+        model.addAttribute("offerCount",
+                repository.countByStatus("Offer"));
+
+        model.addAttribute("rejectedCount",
+                repository.countByStatus("Rejected"));
 
         return "index";
     }

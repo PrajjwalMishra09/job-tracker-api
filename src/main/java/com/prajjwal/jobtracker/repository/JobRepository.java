@@ -12,4 +12,5 @@ public interface JobRepository
     List<JobApplication> findByCompanyNameContainingIgnoreCase(
             String companyName);
 
+    long countByStatus(String status);
 }

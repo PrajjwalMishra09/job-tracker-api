@@ -20,6 +20,55 @@
             Job Tracker
         </h1>
 
+        <div class="row mb-4">
+
+            <div class="col">
+                <div class="card text-center bg-primary text-white">
+                    <div class="card-body">
+                        <h5>Total Jobs</h5>
+                        <h3 th:text="${totalJobs}"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center bg-secondary text-white">
+                    <div class="card-body">
+                        <h5>Applied</h5>
+                        <h3 th:text="${appliedCount}"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center bg-warning">
+                    <div class="card-body">
+                        <h5>Interview</h5>
+                        <h3 th:text="${interviewCount}"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center bg-success text-white">
+                    <div class="card-body">
+                        <h5>Offer</h5>
+                        <h3 th:text="${offerCount}"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center bg-danger text-white">
+                    <div class="card-body">
+                        <h5>Rejected</h5>
+                        <h3 th:text="${rejectedCount}"></h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <form action="/search" method="get" class="mb-4">
 
             <div class="input-group">
